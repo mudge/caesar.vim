@@ -6,7 +6,7 @@ describe "caesar.vim" do
   end
 
   describe "<C-R> mapping", :filesystem => true do
-    pending "converts the number under the cursor to Roman numerals" do
+    it "converts the number under the cursor to Roman numerals" do
       vim.edit("roman.txt")
       vim.insert("19")
       vim.normal
