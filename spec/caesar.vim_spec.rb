@@ -6,7 +6,7 @@ describe "caesar.vim" do
   end
 
   describe "<C-R> mapping", :filesystem => true do
-    it "converts the number under the cursor to Roman numerals" do
+    pending "converts the number under the cursor to Roman numerals" do
       vim.edit("roman.txt")
       vim.insert("19")
       vim.normal
@@ -14,6 +14,12 @@ describe "caesar.vim" do
       vim.write
 
       expect(File.read("roman.txt").chomp).to eq("XIX")
+    end
+  end
+
+  describe "caesar#ToRoman()" do
+    it "converts 1 to I" do
+      expect(vim.echo("caesar#ToRoman(1)")).to eq("I")
     end
   end
 end
