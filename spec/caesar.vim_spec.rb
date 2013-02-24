@@ -33,5 +33,9 @@ describe "caesar.vim" do
     it "converts 19 to XIX" do
       expect(vim.echo("caesar#ToRoman(19)")).to eq("XIX")
     end
+
+    it "converts 3994 to MMMCMXCIV" do
+      expect(vim.echo("caesar#ToRoman(3994)")).to eq("MMMCMXCIV")
+    end
   end
 end
