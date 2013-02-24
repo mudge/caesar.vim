@@ -1,4 +1,4 @@
-let s:digits = [[5, "V"], [1, "I"]]
+let s:digits = [[10, "X"], [9, "IX"], [5, "V"], [1, "I"]]
 
 function caesar#ToRoman(n)
   let n = a:n
