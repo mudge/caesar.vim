@@ -21,5 +21,9 @@ describe "caesar.vim" do
     it "converts 1 to I" do
       expect(vim.echo("caesar#ToRoman(1)")).to eq("I")
     end
+
+    it "converts 2 to II" do
+      expect(vim.echo("caesar#ToRoman(2)")).to eq("II")
+    end
   end
 end
