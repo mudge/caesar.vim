@@ -29,5 +29,9 @@ describe "caesar.vim" do
     it "converts 6 to VI" do
       expect(vim.echo("caesar#ToRoman(6)")).to eq("VI")
     end
+
+    it "converts 19 to XIX" do
+      expect(vim.echo("caesar#ToRoman(19)")).to eq("XIX")
+    end
   end
 end
