@@ -1,13 +1,13 @@
+let s:digits = [[5, "V"], [1, "I"]]
+
 function caesar#ToRoman(n)
   let n = a:n
   let result = ""
-  while n >= 5
-    let result .= "V"
-    let n -= 5
-  endwhile
-  while n >= 1
-    let result .= "I"
-    let n -= 1
-  endwhile
+  for [limit, glyph] in s:digits
+    while n >= limit
+      let result .= glyph
+      let n -= limit
+    endwhile
+  endfor
   return result
 endfunction
